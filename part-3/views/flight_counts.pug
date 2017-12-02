@@ -1,0 +1,20 @@
+html
+  head
+    title Version 2 Challenge Part 3
+    link(rel='stylesheet' href='/flight_counts.css')
+  body
+    h1 Flight Counts
+    h2 For passengers with #{minFlightCount} or more flights
+    div(id='message')
+      p= message
+    table(class='flight-counts')
+      tr
+        th Passenger Name
+        th Flight Count
+      each passenger in flightCounts
+        tr(class='passenger')
+          td= passenger.name
+          td= passenger.flightcount
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous")
+    script(src="/flight_counts.js")

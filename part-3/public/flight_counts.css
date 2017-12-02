@@ -1,0 +1,16 @@
+table.flight-counts {
+  border-collapse: collapse;
+}
+
+table.flight-counts th, table.flight-counts td {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+div.total-flights {
+  margin-top: 10px;
+}
+
+.light-gray {
+  background-color: #eee;
+}

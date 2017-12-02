@@ -11,7 +11,7 @@
 
 ### Getting to the USB drive files (from a mac)
 
-`cd "/Volumes/Practice V1/"`
+`cd "/Volumes/Practice A/"`
 
 ### Installation 
 
@@ -83,9 +83,9 @@ You may use vanilla JS or JQuery.
 
 ## Part 4: Uninstall
 
-# Stop any running express servers
-# Quit Postico or the psql console (if applicable)
-# Uninstall the db by cd-ing part-1 and running `npm run db:destroy`
-# cd out of the usb drive from the terminal
-# Close the text editor window(s) with the challenge files
-# Eject the USB drive
+1. Stop any running express servers
+2. Quit Postico or the psql console (if applicable)
+3. Uninstall the db by cd-ing part-1 and running `npm run db:destroy`
+4. cd out of the usb drive from the terminal
+5. Close the text editor window(s) with the challenge files
+6. Eject the USB drive

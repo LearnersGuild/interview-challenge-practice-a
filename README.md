@@ -77,9 +77,9 @@ count" column of the table) in the span with the id `flight-count-total`.
 You may use vanilla JS or JQuery.
 
 - [ ] __10:__ Each table row has the appropriate event listener(s).
-- [ ] __10:__ The table is accessed in the callback function from the event listener(s).
+- [ ] __10:__ The table row is accessed in the callback function from the event listener(s).
 - [ ] __10:__ The table row background color turns light gray (#eee) when moused over.
-- [ ] __10:__ The ingredient element table row background color reverts to white when the mouse is no longer over the element.
+- [ ] __10:__ The table row background color reverts to white when the mouse is no longer over the element.
 
 ## Part 4: Uninstall
 

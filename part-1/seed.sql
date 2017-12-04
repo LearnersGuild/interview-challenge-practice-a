@@ -1,5 +1,3 @@
-\c practice_challenge_v1_flights
-
 INSERT INTO flights (flight_number) VALUES
   ('1147A'),
   ('8896'),

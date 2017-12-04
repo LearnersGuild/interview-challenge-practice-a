@@ -3,7 +3,7 @@ const { getFlightCounts } = require('./db/db');
 
 const app = express();
 app.use(express.static('public'));
-// app.set('view engine', 'pug');
+app.set('view engine', 'pug');
 // app.set('view engine', 'ejs')
 
 app.get('/flight_counts', (req, res) => {

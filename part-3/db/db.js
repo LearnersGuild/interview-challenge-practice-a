@@ -1,6 +1,6 @@
 const pgp = require('pg-promise')()
 
-const db = pgp('postgres://localhost/practice_challenge_v1_flights')
+const db = pgp(process.env.DB_URL)
 db.connect()
 
 /**

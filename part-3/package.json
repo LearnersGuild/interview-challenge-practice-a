@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Bonnie Schulkin",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "source ../env.sh && nodemon app.js"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"

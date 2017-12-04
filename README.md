@@ -19,6 +19,10 @@
 
 `cd part-1 && npm run db:init && cd ..`
 
+### Accessing the database
+
+- You can find the database config in the `env.sh` file at the top level of this repository.
+
 ### Starting the server
 
 In parts 2 and 3, the server will start with `npm start`.
@@ -84,8 +88,8 @@ You may use vanilla JS or JQuery.
 ## Part 4: Uninstall
 
 1. Stop any running express servers
-2. Quit Postico or the psql console (if applicable)
-3. Uninstall the db by cd-ing part-1 and running `npm run db:destroy`
+2. Remove Postico entry for the database (if applicable)
+3. Remove command line entry/ies for the database (delete from `~/.zsh_history` or `~/.bash_history`)
 4. cd out of the usb drive from the terminal
-5. Close the text editor window(s) with the challenge files
+5. Close the IDE / text editor window(s) with the challenge files
 6. Eject the USB drive

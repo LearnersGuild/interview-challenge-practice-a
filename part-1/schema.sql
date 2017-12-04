@@ -1,7 +1,6 @@
-DROP DATABASE IF EXISTS practice_challenge_v1_flights;
-CREATE DATABASE practice_challenge_v1_flights;
-
-\c practice_challenge_v1_flights
+DROP TABLE IF EXISTS flight_passengers;
+DROP TABLE IF EXISTS flights;
+DROP TABLE IF EXISTS passengers;
 
 CREATE TABLE flights (
   id SERIAL PRIMARY KEY,

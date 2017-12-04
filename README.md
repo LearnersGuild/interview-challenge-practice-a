@@ -11,7 +11,7 @@
 
 ### Getting to the USB drive files (from a mac)
 
-`cd "/Volumes/Practice A/"`
+`cd "/Volumes/INTERVIEWDRIVE/"`
 
 ### Installation 
 

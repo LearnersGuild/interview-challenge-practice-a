@@ -13,15 +13,20 @@
 
 `cd "/Volumes/INTERVIEWDRIVE/"`
 
-### Installation 
+### Installation
 
-- The only installation necessary from you is to install the db by running 
+- The only installation necessary from you is to install the db by running
 
 `cd part-1 && npm run db:init && cd ..`
 
 ### Accessing the database
 
 - You can find the database config in the `env.sh` file at the top level of this repository.
+- If you would like to use Postico to access the database you may use the `... .pgfav` file in the top interview challenge folder to automatically add the database connection details. Use the following command:
+
+```sh
+open postico-db-practice-a.pgfav
+```
 
 ### Starting the server
 
@@ -32,9 +37,9 @@ In parts 2 and 3, the server will start with `npm start`.
 ### Node and PostgreSQL
 
 Create a function in `db.js` called `getFlightCounts` that uses `pg-promise`.
-The function takes a `minFlightCount` parameter, and returns the name and number
-of flights ("flight count") for all passengers who have at least that many
-flights in the database.
+The function takes a `minFlightCount` parameter, and returns the passenger name
+and number of flights ("flight count") for all passengers who have at least that
+many flights in the database.
 
 Sample promise resolution:
 

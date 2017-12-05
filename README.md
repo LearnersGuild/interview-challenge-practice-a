@@ -57,10 +57,10 @@ Sample promise resolution:
 
 ### GET route
 
-Create a GET route for `/flight_counts` that receives GET data with the key
-`minFlightCount` (value is the minimum number of flights a passenger must have
-in order to be displayed on the page). Use the `getFlightCounts` function
-provided in `db.js`.
+Create a GET route for `/flight_counts` that receives data from the query
+parameter `minFlightCount` (the value is the minimum number of flights a
+passenger must have in order to be displayed on the page). Use the
+`getFlightCounts` function provided in `db.js`.
 
 - [ ] __5:__ Route uses GET
 - [ ] __10:__ Route accesses GET data

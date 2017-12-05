@@ -98,3 +98,4 @@ You may use vanilla JS or JQuery.
 4. cd out of the usb drive from the terminal
 5. Close the IDE / text editor window(s) with the challenge files
 6. Eject the USB drive
+7. End the Zoom recording

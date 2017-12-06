@@ -56,14 +56,14 @@ Sample promise resolution:
 ```
 
 - [ ] __5:__ The function takes a parameter called `flightNumber`.
-- [ ] __15:__ The function's query returns the name of every passenger on the flight with the given number.
+- [ ] __15:__ The SQL query returns the name of every passenger on the flight with the given number.
 - [ ] __10:__ The function returns a promise which resolves to the results of the query
 
 ## Part 2: Express
 
 ### GET route
 
-Create a GET route for `/flight_passengers` that receives data from the GET
+Create a GET route for `/flight_roster` that receives data from the GET
 parameter `flightNumber` (the value is a string that must be included in the
 passenger's name in order for the passenger to be displayed on the page). Use the
 `getFlightCounts` function provided in `db.js`.
@@ -72,7 +72,7 @@ passenger's name in order for the passenger to be displayed on the page). Use th
 - [ ] __10:__ Route accesses GET data from query string
 - [ ] __10:__ Route uses the provided `getFlightCounts` function to retrieve the passenger data
 - [ ] __10:__ Route displays flight number somewhere on the page.
-- [ ] __15:__ Route uses `flight_passengers.ejs` or `flight_passengers.pug` to display names and flight counts of passengers returned from `getFlightCounts`
+- [ ] __15:__ Route uses `flight_roster.ejs` or `flight_roster.pug` to display names and flight counts of passengers returned from `getFlightCounts`
 - [ ] __10:__ If there's an error, the page displays `An error occurred` in the div with the id `message`.
 - [ ] __10:__ Learner demonstrates GET route *non-error* functionality using a browser
 
@@ -80,9 +80,9 @@ passenger's name in order for the passenger to be displayed on the page). Use th
 
 ### DOM Manipulation
 
-In this section, the scaffolding has been set up for the `/flight_passengers` route
+In this section, the scaffolding has been set up for the `/flight_roster` route
 as described in Part 2. Choose a template engine (EJS or Pug) in app.js and then
-access the `flight_passengers` route with a query string of `flightNumber=1147A` to
+access the `flight_roster` route with a query string of `flightNumber=1147A` to
 see it in action.
 
 The challenge for this section: when a user clicks the `Give passenger a parachute`

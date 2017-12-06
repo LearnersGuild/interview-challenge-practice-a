@@ -4,11 +4,11 @@
   "author": "Bonnie Schulkin",
   "scripts": {
     "db:init": "npm run db:create && npm run db:seed",
-    "db:setenv": "source ../env.sh",
-    "db:create": "npm run db:setenv && psql $DB_URL < schema.sql",
-    "db:seed": "npm run db:setenv && psql $DB_URL < seed.sql"
+    "db:create": "source ../.env && psql $DB_URL < schema.sql",
+    "db:seed": "source ../.env && psql $DB_URL < seed.sql"
   },
   "dependencies": {
+    "dotenv": "^4.0.0",
     "pg-promise": "^7.3.2"
   }
 }

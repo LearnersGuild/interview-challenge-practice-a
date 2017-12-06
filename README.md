@@ -4,25 +4,30 @@
 
 ### This challenge has three parts:
 
-- Create a function that uses pg-promise to execute a SQL query
-- Write a GET route in Express that displays a Pug or EJS template
-- Change the background of table rows on mouseover
-- (Part 4 is removing the challenge from your computer, and doesn't count toward your time)
+- Part 1: Create a function that uses pg-promise to execute a SQL query
+- Part 2: Write a GET route in Express that displays a Pug or EJS template
+- Part 3: Change the background of table rows on mouseover
+
+(Part 4 is removing the challenge from your computer, and doesn't count toward your time)
 
 ### Getting to the USB drive files (from a mac)
 
-`cd "/Volumes/INTERVIEWDRIVE/"`
+```sh
+cd "/Volumes/INTERVIEWDRIVE/[YOUR PROJECT FOLDER]"
+```
 
 ### Installation
 
 - The only installation necessary from you is to install the db by running
 
-`cd part-1 && npm run db:init && cd ..`
+```sh
+cd part-1 && npm run db:init && cd ..
+```
 
 ### Accessing the database
 
-- You can find the database config in the `env.sh` file at the top level of this repository.
-- If you would like to use Postico to access the database you may use the `... .pgfav` file in the top interview challenge folder to automatically add the database connection details. Use the following command:
+- You can find the database connection string in the `.env` file at the top level of this repository.
+- If you would like to use Postico to access the database you may use the `.pgfav` file in the top interview challenge folder to automatically add the database connection details. Use the following command:
 
 ```sh
 open postico-db-practice-a.pgfav

@@ -22,7 +22,7 @@ INSERT INTO passengers (name) VALUES
   ('Ginger Spice')
 ;
 
-INSERT INTO flight_passengers (passenger_id, flight_id) VALUES
+INSERT INTO flights_passengers (passenger_id, flight_id) VALUES
   (1, 1),
   (1, 2),
   (1, 3),

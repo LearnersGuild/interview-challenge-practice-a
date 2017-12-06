@@ -1,27 +1,36 @@
+const path = require('path')
+require('dotenv').config({path: path.join(__dirname, '../../.env')})
 const pgp = require('pg-promise')()
 
-const db = pgp(process.env.DB_URL)
+const connection = {
+  host: process.env.DB_HOST,
+  port: parseInt(process.env.DB_PORT),
+  database: process.env.DB_DATABASE,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  ssl: true
+}
+
+const db = pgp(connection)
 db.connect()
 
 /**
- * Get the names and flight counts for passengers having at least the minimum
- * requested count
- * @param  {number} minFlightCount Minimum number of flights for a passenger
- *                                  to be included in results
- * @return {Promise}              Promise that resolves to an array of objects.
- *                                  Each object has keys 'name' and 'flightcount'
+ * Get the names for passengers on a specific flight
+ * @param  {string} flightNumber  Flight number for which to retrieve passenger names.
+ * @return {Promise}              Promise that resolves to an array of strings.
+ *                                  Each string is a passenger name.
  */
-const getFlightCounts = minFlightCount =>
+const getFlightPassengers = flightNumber =>
   db.query(`
-    SELECT p.name, COUNT(fp.id) AS flightcount
+    SELECT p.name
     FROM passengers AS p
-      JOIN flight_passengers AS fp
-      ON p.id = fp.passenger_id
-    GROUP BY p.name
-    HAVING COUNT(fp.id) >= $1
-    ORDER BY COUNT(fp.id)`,
-    [minFlightCount])
+      JOIN flights_passengers AS fp
+        ON p.id = fp.passenger_id
+      JOIN flights AS f
+        ON f.id = fp.flight_id
+    WHERE f.flight_number = $1`,
+    [flightNumber])
 
 module.exports = {
-  getFlightCounts,
+  getFlightPassengers,
 }

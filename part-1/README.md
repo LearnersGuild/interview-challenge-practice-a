@@ -1,6 +1,6 @@
 # Foundations -> Practice Version 2 Scaffold
 
-# Part 2: Express
+# Part 1: SQL
 
 ## To install
 

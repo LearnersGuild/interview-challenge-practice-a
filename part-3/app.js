@@ -1,20 +1,20 @@
 require('dotenv').config({path: '../.env'})
 const express = require('express');
-const { getFlightCounts } = require('./db/db');
+const { getFlightPassengers } = require('./db/db');
 
 const app = express();
 app.use(express.static('public'));
-app.set('view engine', 'pug');
+// app.set('view engine', 'pug');
 // app.set('view engine', 'ejs')
 
-app.get('/flight_counts', (req, res) => {
-  const minFlightCount = req.query.minFlightCount;
-  getFlightCounts(minFlightCount)
-    .then((flightCounts) => {
-      res.render('flight_counts', { minFlightCount, flightCounts });
+app.get('/flight_passengers', (req, res) => {
+  const flightNumber = req.query.flightNumber;
+  getFlightPassengers(flightNumber)
+    .then((passengers) => {
+      res.render('flight_passengers', { flightNumber, passengers });
     })
     .catch((err) => {
-      res.render('flight_counts', { message: `An error occurred: ${err.toString()}` });
+      res.render('flight_passengers', { message: `An error occurred: ${err.toString()}` });
     })
     .catch(console.error);
 });

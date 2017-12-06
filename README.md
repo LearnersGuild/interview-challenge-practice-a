@@ -41,66 +41,68 @@ In parts 2 and 3, the server will start with `npm start`.
 
 ### Node and PostgreSQL
 
-Create a function in `db.js` called `getFlightCounts` that uses `pg-promise`.
-The function takes a `minFlightCount` parameter, and returns the passenger name
-and number of flights ("flight count") for all passengers who have at least that
-many flights in the database.
+Create a function in `db.js` called `getFlightPassengers` that uses `pg-promise`.
+The function takes a string (`flightNumber`) as a parameter. It returns a promise that
+resolves to an array of passengers on that flight. Each passenger is an object with the key "name".
 
 Sample promise resolution:
 
 ```
-  [ { name: 'Michael Jackson', flightcount: '7' },
-    { name: 'Baby Spice', flightcount: '8' } ]
+  [ { name: 'Michael Jackson' },
+    { name: 'Tito Jackson' },
+    { name: 'Jackie Jackson' },
+    { name: 'Baby Spice' },
+    { name: 'Scary Spice' } ]
 ```
 
-- [ ] __5:__ The function takes `minFlightCount` as a parameter
-- [ ] __10:__ The function's query returns the name and flight count for passengers in the database.
-- [ ] __10:__ The function's query returns only the passengers who have a flight count greater than or equal to the `minFlightCount` parameter.
+- [ ] __5:__ The function takes a parameter called `flightNumber`.
+- [ ] __15:__ The function's query returns the name of every passenger on the flight with the given number.
 - [ ] __10:__ The function returns a promise which resolves to the results of the query
 
 ## Part 2: Express
 
 ### GET route
 
-Create a GET route for `/flight_counts` that receives data from the query
-parameter `minFlightCount` (the value is the minimum number of flights a
-passenger must have in order to be displayed on the page). Use the
+Create a GET route for `/flight_passengers` that receives data from the GET
+parameter `flightNumber` (the value is a string that must be included in the
+passenger's name in order for the passenger to be displayed on the page). Use the
 `getFlightCounts` function provided in `db.js`.
 
 - [ ] __5:__ Route uses GET
-- [ ] __10:__ Route accesses GET data
+- [ ] __10:__ Route accesses GET data from query string
 - [ ] __10:__ Route uses the provided `getFlightCounts` function to retrieve the passenger data
-- [ ] __15:__ Route uses `flight_counts.ejs` or `flight_counts.pug` to display names and flight counts of passengers returned from `getFlightCounts`
+- [ ] __10:__ Route displays flight number somewhere on the page.
+- [ ] __15:__ Route uses `flight_passengers.ejs` or `flight_passengers.pug` to display names and flight counts of passengers returned from `getFlightCounts`
 - [ ] __10:__ If there's an error, the page displays `An error occurred` in the div with the id `message`.
-- [ ] __10:__ Learner demonstrates GET route non-error functionality using a browser
-- [ ] __10:__ Learner demonstrates GET route error functionality using a browser
+- [ ] __10:__ Learner demonstrates GET route *non-error* functionality using a browser
 
 ## Part 3: Front-End
 
 ### DOM Manipulation
 
-In this section, the scaffolding has been set up for the `/flight_counts` route
+In this section, the scaffolding has been set up for the `/flight_passengers` route
 as described in Part 2. Choose a template engine (EJS or Pug) in app.js and then
-access the `flight_counts` route with a query string of `minFlightCount=4` to
+access the `flight_passengers` route with a query string of `flightNumber=1147A` to
 see it in action.
 
-The challenge for this section: when a user clicks the `Get total flights`
-button, display the total flight count (the sum of the numbers in the "flight
-count" column of the table) in the span with the id `flight-count-total`.
+The challenge for this section: when a user clicks the `Give passenger a parachute`
+button, one of the passengers (it doesn't matter which one) is removed from the
+list of passengers. __Note__: The passenger only needs to be removed from the
+page. __There is no need to update the database or communicate with the server in any way.__
 
 You may use vanilla JS or JQuery.
 
-- [ ] __10:__ Each table row has the appropriate event listener(s).
-- [ ] __10:__ The table row is accessed in the callback function from the event listener(s).
-- [ ] __10:__ The table row background color turns light gray (#eee) when moused over.
-- [ ] __10:__ The table row background color reverts to white when the mouse is no longer over the element.
+- [ ] __10:__ The "Give passenger a parachute" button has an event listener on click.
+- [ ] __10:__ The passenger list has one fewer row after the click.
+- [ ] __10:__ If there are no passengers left in the list when the button is clicked, the page displays a message in the div with the id `message`: "All out of passengers".
 
 ## Part 4: Uninstall
 
 1. Stop any running express servers
 2. Remove Postico entry for the database (if applicable)
-3. Remove command line entry/ies for the database (delete from `~/.zsh_history` or `~/.bash_history`)
+3. Remove command line entry/ies for the database (delete from `~/.zsh_history` or `~/.bash_history`) if applicable
 4. cd out of the usb drive from the terminal
 5. Close the IDE / text editor window(s) with the challenge files
-6. Eject the USB drive
-7. End the Zoom recording
+6. Close the terminal window where the challenge was being run
+7. Eject the USB drive
+8. End the Zoom recording

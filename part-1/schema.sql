@@ -12,7 +12,7 @@ CREATE TABLE passengers (
   name VARCHAR(64)
 );
 
-CREATE TABLE flight_passengers (
+CREATE TABLE flights_passengers (
   id SERIAL PRIMARY KEY,
   flight_id INTEGER REFERENCES flights,
   passenger_id INTEGER REFERENCES passengers

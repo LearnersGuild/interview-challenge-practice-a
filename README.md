@@ -2,7 +2,7 @@
 
 ## Intro
 
-### This challenge has three parts:
+#### This challenge has three parts:
 
 - Part 1: Create a function that uses pg-promise to execute a SQL query
 - Part 2: Write a GET route in Express that displays a Pug or EJS template
@@ -10,18 +10,18 @@
 
 (Part 4 is removing the challenge from your computer, and doesn't count toward your time)
 
-### Getting to the USB drive files (from a mac)
+#### Getting to the USB drive files (from a mac)
 
 ```sh
 cd "/Volumes/INTERVIEWDRIVE/[YOUR PROJECT FOLDER]"
 ```
 
-### Installation
+#### Installation
 
 - The only installation necessary from you is to install the db by running
 
 ```sh
-cd part-1 && npm run db:init && cd ..
+cd setup && npm run db:init && cd ..
 ```
 
 ### Accessing the database
@@ -33,13 +33,9 @@ cd part-1 && npm run db:init && cd ..
 open postico-db-practice-a.pgfav
 ```
 
-### Starting the server
-
-In parts 2 and 3, the server will start with `npm start`.
-
 ## Part 1: SQL
 
-### Node and PostgreSQL
+#### Node and PostgreSQL
 
 Create a function in `db.js` called `getFlightPassengers` that uses `pg-promise`.
 The function takes a string (`flightNumber`) as a parameter. It returns a promise that
@@ -61,7 +57,7 @@ Sample promise resolution:
 
 ## Part 2: Express
 
-### GET route
+#### GET route
 
 Create a GET route for `/flight_roster` that receives data from the GET
 parameter `flightNumber` (the value is a string that must be included in the
@@ -76,9 +72,13 @@ passenger's name in order for the passenger to be displayed on the page). Use th
 - [ ] __10:__ If there's an error, the page displays `An error occurred` in the div with the id `message`.
 - [ ] __10:__ Learner demonstrates GET route *non-error* functionality using a browser
 
+#### Starting the server
+
+To start the server, run: `npm start`.
+
 ## Part 3: Front-End
 
-### DOM Manipulation
+#### DOM Manipulation
 
 In this section, the scaffolding has been set up for the `/flight_roster` route
 as described in Part 2. Choose a template engine (EJS or Pug) in app.js and then
@@ -95,6 +95,10 @@ You may use vanilla JS or JQuery.
 - [ ] __10:__ The "Give passenger a parachute" button has an event listener on click.
 - [ ] __10:__ The passenger list has one fewer row after the click.
 - [ ] __10:__ If there are no passengers left in the list when the button is clicked, the page displays a message in the div with the id `message`: "All out of passengers".
+
+#### Starting the server
+
+To start the server, run: `npm start`.
 
 ## Part 4: Uninstall
 

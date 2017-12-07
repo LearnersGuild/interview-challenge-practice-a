@@ -2,11 +2,6 @@
   "name": "section-1",
   "version": "1.0.0",
   "author": "Bonnie Schulkin",
-  "scripts": {
-    "db:init": "npm run db:create && npm run db:seed",
-    "db:create": "source ../.env && psql $DB_URL < schema.sql",
-    "db:seed": "source ../.env && psql $DB_URL < seed.sql"
-  },
   "dependencies": {
     "dotenv": "^4.0.0",
     "pg-promise": "^7.3.2"

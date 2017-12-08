@@ -4,6 +4,7 @@ html
     link(rel='stylesheet' href='/flight_roster.css')
   body
     h1 Passengers on Flight #{flightNumber}
+    button(id='eject-passenger') Give passenger a parachute
     div(id='message')
       p= message
     table(class='flight-passengers')
@@ -14,7 +15,6 @@ html
           tr(class='passenger')
             td= passenger.name
       -}
-    button(id='eject-passenger') Give passenger a parachute
     script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous")
     script(src="/flight_roster.js")

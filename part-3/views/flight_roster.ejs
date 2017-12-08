@@ -9,6 +9,7 @@
 
 <body>
   <h1>Passengers on Flight <%= flightNumber %> </h1>
+  <button id="eject-passenger">Give passenger a parachute</button>
   <div id="message">
     <p>
       <% if (locals.message) { %>
@@ -30,7 +31,6 @@
       <% } %>
     <% } %>      
   </table>
-  <button id="eject-passenger">Give passenger a parachute</button>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>

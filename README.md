@@ -42,7 +42,7 @@ This challenge has three parts:
 
 Create a function in the file `db.js` called `getFlightPassengers`.
 
-The function should accept a string parameter named `flightNumber`. It should use the `pg-promise` database client (already instantiated) and return a promise that resolves to an array of objects containing the names of all passengers on that flight. The property for the passenger name values in these objects should be called `name`.
+The function should accept a string parameter named `flightNumber`. It should use the `pg-promise` database client (already instantiated) and return a promise that resolves to the results of the query (an array of objects containing the names of all passengers on that flight. The property for the passenger name values in these objects should be called `name`).
 
 Sample result:
 
@@ -62,7 +62,7 @@ Sample result:
 
 ##### GET route
 
-Implement handling for a route/endpoint `GET /flight_roster`. It should accept a query string parameter `flightNumber` -- a string value representing a flight number. Use the `getFlightPassengers` function provided in `db.js` to retrieve the list of passengers on the speified flight.
+Implement handling for a route/endpoint `GET /flight_roster`. It should accept a query string parameter `flightNumber` -- a string value representing a flight number. Use the `getFlightPassengers` function provided in `db.js` to retrieve the list of passengers on the specified flight.
 
 - [ ] __5:__ Route is a GET route
 - [ ] __20:__ Route uses the `flightNumber` query string parameter and the provided `getFlightCounts` function to retrieve the passenger data

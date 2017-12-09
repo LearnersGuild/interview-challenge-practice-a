@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Bonnie Schulkin",
   "scripts": {
-    "db:init": "npm run db:create && npm run db:seed",
+    "setup": "npm run db:create && npm run db:seed",
     "db:create": "source ../.env && psql $DATABASE_URL < schema.sql",
     "db:seed": "source ../.env && psql $DATABASE_URL < seed.sql"
   },

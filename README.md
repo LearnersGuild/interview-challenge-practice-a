@@ -38,7 +38,7 @@ This challenge has three parts:
 
 ### Part 1: SQL
 
-##### Node and PostgreSQL
+##### PostgreSQL, Node.js, & pg-promise
 
 Create a function in the file `db.js` called `getFlightPassengers`.
 
@@ -57,6 +57,12 @@ Sample result:
 - [ ] __5:__ The function takes a parameter called `flightNumber`.
 - [ ] __15:__ The result set of the SQL query includes one row containing a passenger name field for every passenger on the specified flight number.
 - [ ] __10:__ The function returns a promise which resolves to the result of the query.
+
+#### ER Diagram
+
+An ER diagram has been provided that visualizes the challenge database schema:
+
+![ER Diagram](/part-1/flights_ERD.png)
 
 ### Part 2: Express
 

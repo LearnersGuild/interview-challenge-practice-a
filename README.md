@@ -60,7 +60,7 @@ Sample result:
 
 #### ER Diagram
 
-An ER diagram has been provided that visualizes the challenge database schema:
+An ER diagram has been provided that visualizes the database schema:
 
 ![ER Diagram](/part-1/flights_ERD.png)
 

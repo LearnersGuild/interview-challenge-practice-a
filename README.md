@@ -12,7 +12,7 @@ First, we'll need to navigate to the directory on the interview USB drive where 
 cd "/Volumes/INTERVIEWDRIVE/[YOUR DIRECTORY NAME]"
 ```
 
-Next, we need to setup the database. You can do so by simply running a script:
+Next, we need to setup the challenge. You can do so by simply running a script:
 
 ```sh
 cd setup && npm run setup && cd ..

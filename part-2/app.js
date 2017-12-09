@@ -1,6 +1,6 @@
 require('dotenv').config({path: '../.env'})
-const express = require('express');
-const { getFlightPassengers } = require('./db/db');
+const express = require('express')
+const {getFlightPassengers} = require('./db/db')
 
 // JSDoc for getFlightPassengers
 /**
@@ -10,8 +10,8 @@ const { getFlightPassengers } = require('./db/db');
  *                                  Each string is a passenger name.
  */
 
-const app = express();
+const app = express()
 // app.set('view engine', 'pug')
 // app.set('view engine', 'ejs')
 
-app.listen(3000, () => console.log('Flying high on port 3000!'));
+app.listen(3000, () => console.log('Flying high on port 3000!'))

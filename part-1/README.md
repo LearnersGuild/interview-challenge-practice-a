@@ -1,11 +1,9 @@
-# Foundations -> Practice Version 2 Scaffold
+# Practice Inteview Challenge: Part 1: SQL
 
-# Part 1: SQL
+### Installation
 
-## To install
+* `npm install`
 
-* `npm run db:init`
-
-## For challenge instructions
+### Challenge instructions
 
 See the README at the top level of this repository.

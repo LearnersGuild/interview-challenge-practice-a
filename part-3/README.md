@@ -1,16 +1,9 @@
-# Foundations -> Practice Version 2 Scaffold
+# Practice Inteview Challenge: Part 1: DOM Manipulation
 
-# Part 3: Front-End
+### Installation
 
-## To install
+* `npm install`
 
-* Run database installation instructions from Part 1 if the flights db hasn't
-  yet been created and seeded.
-
-## To start server
-
-* `npm start`
-
-## For challenge instructions
+### Challenge instructions
 
 See the README at the top level of this repository.

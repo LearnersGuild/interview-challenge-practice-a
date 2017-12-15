@@ -6,6 +6,10 @@ This document contains the requirements for completing your interview challenge 
 
 ### Setup
 
+#### Completed by your interviewer:
+
+
+#### For you to complete:
 First, we'll need to navigate to the directory on the interview USB drive where the challenge files are. On a mac, you'll find it here:
 
 ```sh
@@ -71,7 +75,7 @@ An ER diagram has been provided that visualizes the database schema:
 Implement handling for a route/endpoint `GET /flight_roster`. It should accept a query string parameter `flightNumber` -- a string value representing a flight number. Use the `getFlightPassengers` function provided in `db.js` to retrieve the list of passengers on the specified flight.
 
 - [ ] __5:__ Route is a GET route
-- [ ] __20:__ Route uses the `flightNumber` query string parameter and the provided `getFlightCounts` function to retrieve the passenger data
+- [ ] __20:__ Route uses the `flightNumber` query string parameter and the provided `getFlightPassengers` function to retrieve the passenger data
 - [ ] __15:__ Route uses `flight_roster.ejs` or `flight_roster.pug` to render the list of passengers retrieved.
 - [ ] __10:__ Passenger names are fully displayed somewhere on the rendered web page.
 - [ ] __10:__ If the case of an error, the text `An error occurred` is displayed in the div with the id `message`.
@@ -108,5 +112,5 @@ Let's do a little cleanup:
 3. From your terminal, `cd` out of the usb drive directory
 4. Quit your terminal application
 5. Quit your text editor application
-6. Eject the USB drive
+6. Eject the USB drive (`diskutil unmount INTERVIEWDRIVE`)
 7. Remove the `Postico` entry for the database connection (if applicable)

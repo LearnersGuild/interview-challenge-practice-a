@@ -38,7 +38,7 @@ This challenge has three parts:
 
 - Part 1: Create a function that uses pg-promise to execute a SQL query from within a Node.js program
 - Part 2: Using Express, implement handling for a GET route that renders (returns markup for) an HTML page using a template engine (Pug or EJS)
-- Part 3: Change the background of the rows in an HTML table when hovered over
+- Part 3: Remove a row from a html page using javascript
 
 ### Part 1: SQL
 

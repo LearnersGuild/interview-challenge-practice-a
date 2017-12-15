@@ -112,5 +112,6 @@ Let's do a little cleanup:
 3. From your terminal, `cd` out of the usb drive directory
 4. Quit your terminal application
 5. Quit your text editor application
-6. Eject the USB drive (`diskutil unmount INTERVIEWDRIVE`)
+6. Close any browser windows pertaining to the challenge
 7. Remove the `Postico` entry for the database connection (if applicable)
+8. Eject the USB drive (`diskutil unmount INTERVIEWDRIVE`)

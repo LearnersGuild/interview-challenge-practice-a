@@ -59,6 +59,8 @@ Sample result:
 ```
 
 - [ ] __5:__ The function takes a parameter called `flightNumber`.
+- [ ] __10:__ The function executes a SQL query using `pg-promise`
+- [ ] __10:__ The query uses index variables (e.g. `$1`) to make the query dynamic 
 - [ ] __15:__ The result set of the SQL query includes one row containing a passenger name field for every passenger on the specified flight number.
 - [ ] __10:__ The function returns a promise which resolves to the result of the query.
 
@@ -75,10 +77,10 @@ An ER diagram has been provided that visualizes the database schema:
 Implement handling for a route/endpoint `GET /flight_roster`. It should accept a query string parameter `flightNumber` -- a string value representing a flight number. Use the `getFlightPassengers` function provided in `db.js` to retrieve the list of passengers on the specified flight.
 
 - [ ] __5:__ Route is a GET route
-- [ ] __20:__ Route uses the `flightNumber` query string parameter and the provided `getFlightPassengers` function to retrieve the passenger data
-- [ ] __15:__ Route uses `flight_roster.ejs` or `flight_roster.pug` to render the list of passengers retrieved.
-- [ ] __10:__ Passenger names are fully displayed somewhere on the rendered web page.
-- [ ] __10:__ If the case of an error, the text `An error occurred` is displayed in the div with the id `message`.
+- [ ] __10:__ Route uses the `flightNumber` query string parameter and the provided `getFlightPassengers` function to retrieve the passenger data
+- [ ] __10:__ Route passes data to the EJS or Pug template.
+- [ ] __10:__ The template contains code to render the list of passengers retrieved.
+- [ ] __10:__ The template contains code to display the text `An error occurred` in the div with the id `message`, in the case of an error.
 - [ ] __10:__ A `GET /flight_roster` request can be executed using a browser without error.
 
 ##### Starting the server
@@ -93,11 +95,13 @@ In this section, the scaffolding has been created for the `/flight_roster` route
 
 The challenge for this section: when a user clicks the button labeled `Give passenger a parachute`, one of the passengers (it doesn't matter which one) should be removed from the list. __Note__: The passenger only needs to be removed from the page. __There is no need to update the database or communicate with the server in any way.__
 
-You may use vanilla JS or JQuery.
+You may use vanilla JS or jQuery.
 
+- [ ] __10:__ The code uses JavaScript or jQuery to identify and/or create a variable for the `Give passenger a parachute` button DOM element. 
 - [ ] __10:__ The `Give passenger a parachute` button has an on click event listener.
+- [ ] __10:__ The event listener callback alters the passenger list.
 - [ ] __10:__ The passenger list has one fewer row after the click.
-- [ ] __10:__ If the list is empty when the button is clicked, the page displays a message in the div with the id `message`: "All out of passengers"
+- [ ] __10:__ If the list is empty when the button is clicked, the page displays a message in the div with the id `message`: "All out of passengers".
 
 ##### Starting the server
 

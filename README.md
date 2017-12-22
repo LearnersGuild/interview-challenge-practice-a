@@ -86,8 +86,8 @@ Implement handling for a route/endpoint `GET /flight_roster`. It should accept a
 - [ ] __5:__ Route is a GET route
 - [ ] __10:__ Route uses the `flightNumber` query string parameter and the provided `getFlightPassengers` function to retrieve the passenger data
 - [ ] __10:__ Route passes data to the EJS or Pug template.
-- [ ] __10:__ The template contains code to render the list of passengers retrieved.
-- [ ] __10:__ The template contains code to display the text `An error occurred` in the div with the id `message`, in the case of an error.
+- [ ] __10:__ The template contains code to correctly render the list of passengers retrieved.
+- [ ] __10:__ The template contains code to correctly display the text `An error occurred` in the div with the id `message`, in the case of a server error.
 - [ ] __10:__ A `GET /flight_roster` request can be executed using a browser without error.
 
 ##### Starting the server
@@ -104,7 +104,8 @@ The challenge for this section: when a user clicks the button labeled `Give pass
 
 You may use vanilla JS or jQuery.
 
-- [ ] __10:__ The code uses JavaScript or jQuery to identify and/or create a variable for the `Give passenger a parachute` button DOM element.
+- [ ] __5:__ Code is written in `flight_roster.js`, not inline in the template file.
+- [ ] __10:__ The code uses JavaScript or jQuery to access the `Give passenger a parachute` button DOM element.
 - [ ] __10:__ The `Give passenger a parachute` button has an on click event listener.
 - [ ] __10:__ The event listener callback alters the passenger list.
 - [ ] __10:__ The passenger list has one fewer row after the click.

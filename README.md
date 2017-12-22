@@ -108,7 +108,7 @@ You may use vanilla JS or jQuery.
 - [ ] __10:__ The code uses JavaScript or jQuery to access the `Give passenger a parachute` button DOM element.
 - [ ] __10:__ The `Give passenger a parachute` button has an on click event listener.
 - [ ] __10:__ The event listener callback alters the passenger list.
-- [ ] __10:__ The passenger list has one fewer row after the click.
+- [ ] __10:__ The passenger list has one fewer row after each click.
 - [ ] __10:__ If the list is empty when the button is clicked, the page displays a message in the div with the id `message`: "All out of passengers".
 
 ##### Starting the server

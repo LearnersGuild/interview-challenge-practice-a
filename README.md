@@ -22,6 +22,13 @@ Next, we need to setup the challenge. You can do so by simply running a script:
 cd setup && npm run setup && cd ..
 ```
 
+The folders for each part of this challenge contain a `package.json` that specifies the dependencies for that part. You can quickly install dependencies for all parts of the challenge by running this script:
+
+```sh
+cd setup && npm run install:all && cd ..
+```
+
+
 ### Accessing the Database
 
 A database connection string has been set in the `.env` file at the top level of this repository. You can use this to connect to the database using any client you wish.
@@ -60,7 +67,7 @@ Sample result:
 
 - [ ] __5:__ The function takes a parameter called `flightNumber`.
 - [ ] __10:__ The function executes a SQL query using `pg-promise`
-- [ ] __10:__ The query uses index variables (e.g. `$1`) to make the query dynamic 
+- [ ] __10:__ The query uses index variables (e.g. `$1`) to make the query dynamic
 - [ ] __15:__ The result set of the SQL query includes one row containing a passenger name field for every passenger on the specified flight number.
 - [ ] __10:__ The function returns a promise which resolves to the result of the query.
 
@@ -97,7 +104,7 @@ The challenge for this section: when a user clicks the button labeled `Give pass
 
 You may use vanilla JS or jQuery.
 
-- [ ] __10:__ The code uses JavaScript or jQuery to identify and/or create a variable for the `Give passenger a parachute` button DOM element. 
+- [ ] __10:__ The code uses JavaScript or jQuery to identify and/or create a variable for the `Give passenger a parachute` button DOM element.
 - [ ] __10:__ The `Give passenger a parachute` button has an on click event listener.
 - [ ] __10:__ The event listener callback alters the passenger list.
 - [ ] __10:__ The passenger list has one fewer row after the click.

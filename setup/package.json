@@ -6,7 +6,7 @@
     "setup": "npm run db:create && npm run db:seed",
     "db:create": "source ../.env && psql $DATABASE_URL < schema.sql",
     "db:seed": "source ../.env && psql $DATABASE_URL < seed.sql",
-    "install_all": "cd ../part-1 && npm install && cd ../part-2 && npm install && cd ../part-3 && npm install && cd ../setup"
+    "install:all": "cd ../part-1 && npm install && cd ../part-2 && npm install && cd ../part-3 && npm install && cd ../setup"
   },
   "dependencies": {
     "dotenv": "^4.0.0",

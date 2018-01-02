@@ -66,8 +66,8 @@ Sample result:
 ```
 
 - [ ] __5:__ The function takes a parameter called `flightNumber`.
-- [ ] __10:__ The function executes a SQL query using `pg-promise`
-- [ ] __10:__ The query uses index variables (e.g. `$1`) to make the query dynamic
+- [ ] __5:__ The function executes a SQL query using `pg-promise`
+- [ ] __5:__ The query uses index variables (e.g. `$1`) to make the query dynamic
 - [ ] __15:__ The result set of the SQL query includes one row containing a passenger name field for every passenger on the specified flight number.
 - [ ] __10:__ The function returns a promise which resolves to the result of the query.
 
@@ -107,7 +107,7 @@ You may use vanilla JS or jQuery.
 - [ ] __5:__ Code is written in `flight_roster.js`, not inline in the template file.
 - [ ] __10:__ The code uses JavaScript or jQuery to access the `Give passenger a parachute` button DOM element.
 - [ ] __10:__ The `Give passenger a parachute` button has an on click event listener.
-- [ ] __10:__ The event listener callback alters the passenger list.
+- [ ] __10:__ The event listener callback removes a row upon the first click.
 - [ ] __10:__ The passenger list has one fewer row after each click.
 - [ ] __10:__ If the list is empty when the button is clicked, the page displays a message in the div with the id `message`: "All out of passengers".
 

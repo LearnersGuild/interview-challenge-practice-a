@@ -68,8 +68,8 @@ Sample result:
 - [ ] __5:__ The function takes a parameter called `flightNumber`.
 - [ ] __5:__ The function executes a SQL query using `pg-promise`
 - [ ] __5:__ The query uses index variables (e.g. `$1`) to make the query dynamic
-- [ ] __15:__ The result set of the SQL query includes one row containing a passenger name field for every passenger on the specified flight number.
-- [ ] __10:__ The function returns a promise which resolves to the result of the query.
+- [ ] __5:__ The function returns a promise which resolves to the result of the query.
+- [ ] __20:__ The result set of the SQL query includes one row containing a passenger name field for every passenger on the specified flight number.
 
 #### ER Diagram
 
@@ -84,7 +84,8 @@ An ER diagram has been provided that visualizes the database schema:
 Implement handling for a route/endpoint `GET /flight_roster`. It should accept a query string parameter `flightNumber` -- a string value representing a flight number. Use the `getFlightPassengers` function provided in `db.js` to retrieve the list of passengers on the specified flight.
 
 - [ ] __5:__ Route is a GET route
-- [ ] __10:__ Route uses the `flightNumber` query string parameter and the provided `getFlightPassengers` function to retrieve the passenger data
+- [ ] __5:__ Route accesses the `flightNumber` query string parameter successfully
+- [ ] __5:__ Route uses the provided `getFlightPassengers` function to retrieve the passenger data
 - [ ] __10:__ Route passes data to the EJS or Pug template.
 - [ ] __10:__ The template contains code to correctly render the list of passengers retrieved.
 - [ ] __10:__ The template contains code to correctly display the text `An error occurred` in the div with the id `message`, in the case of a server error.
@@ -123,7 +124,7 @@ Let's do a little cleanup:
 2. From your terminal, stop any running express servers
 3. From your terminal, `cd` out of the usb drive directory
 4. Quit your terminal application
-5. Quit your text editor application
 6. Close any browser windows pertaining to the challenge
 7. Remove the `Postico` entry for the database connection (if applicable)
+5. Quit your text editor application
 8. Eject the USB drive (`diskutil unmount INTERVIEW`)
